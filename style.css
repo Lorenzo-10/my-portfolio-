@@ -430,3 +430,103 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* Loader Styles */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fffcfc;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.loader-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+.wave-loader {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  height: 40px;
+}
+
+.wave-bar {
+  width: 6px;
+  height: 20px;
+  background: #111211;
+  border-radius: 3px;
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+.wave-bar:nth-child(1) { animation-delay: 0s; }
+.wave-bar:nth-child(2) { animation-delay: 0.2s; }
+.wave-bar:nth-child(3) { animation-delay: 0.4s; }
+.wave-bar:nth-child(4) { animation-delay: 0.6s; }
+.wave-bar:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(2); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+}
+
+/* Hide content initially */
+#content {
+  display: none;
+}
+
+/* Navbar Logo Hover Effect */
+.logo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-name {
+  position: absolute;
+  left: 100%;
+  white-space: nowrap;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.logo-container:hover .nav-logo {
+  transform: scale(1.1);
+}
+
+.logo-container:hover .portfolio-name {
+  opacity: 1;
+  transform: translateX(10px);
+}

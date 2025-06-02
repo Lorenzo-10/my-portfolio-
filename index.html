@@ -7,14 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gwiza Lorenzo</title>
   <!-- fav-icon -->
-  <link rel="icon" href="./assets/my.jpg" type="image/png">
+  <link rel="icon" href="./assets/kgl.jpg" type="image/png">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
   <nav id="desktop-nav">
-    <div class="logo"><a href="#about">Gwiza Lorenzo</a></div>
+    <div class="logo-container">
+      <a href="index.html"><img src="assets/kgl.jpg" alt="logo" class="nav-logo"></a>
+      <span class="portfolio-name">Gwiza Lorenzo</span>
+    </div>
     <div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -40,6 +43,28 @@
       </div>
     </div>
   </nav>
+
+  <body>
+    <!-- Loader Overlay -->
+    <div class="loader-overlay" id="loader">
+      <div class="loader-content">
+        <img class="loader-logo" src="assets/my.jpg" alt="Gwiza Lorenzo Logo">
+        <div class="wave-loader">
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Rest of your existing content -->
+    <div id="content">
+      [...your existing page content...]
+    </div>
+    
+    
   <section id="profile">
     <div class="section__pic-container">
       <img src="assets/my.jpg" alt="Gwiza Lorenzo profile picture" class="about-pic" />
