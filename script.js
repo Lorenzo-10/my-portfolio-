@@ -27,5 +27,5 @@ window.addEventListener('load', function() {
       
       // Your homepage content is already there - no need to reload
     }, 500); // Match this with CSS transition time
-  }, 2000); // 2 seconds loader duration
+  }, 10000); // 10 seconds loader duration
 });
